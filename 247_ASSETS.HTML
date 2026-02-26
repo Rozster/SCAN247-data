@@ -282,7 +282,7 @@
     <!-- ========== BLUE TOP BANNER ========== -->
     <div id="topBanner">
         <div class="bannerLeft">ASSETS</div>
-        <div class="bannerRight">26/02/2026 - 11:03:23</div>
+        <div class="bannerRight">26/02/2026 - 11:07:09</div>
     </div>
 
     <!-- ========== FILTER WRAPPER ========== -->
@@ -3469,7 +3469,7 @@
 
             input = document.getElementById("filterInput");
             filter = input.value.toUpperCase();
-            table = document.getElementById("PROJECTS");
+            table = document.getElementById("ASSETS");
             tr = table.getElementsByTagName("tr");
 
             let rowCount = 0;
@@ -3513,7 +3513,7 @@
         function sortTable(n) {
 
             let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("PROJECTS");
+            table = document.getElementById("ASSETS");
             switching = true;
             let th = table.getElementsByTagName("th")[n];
 
@@ -3568,7 +3568,7 @@
 
         // Function to apply alternating row colors
         function applyAlternatingRowColors() {
-            let table = document.getElementById("PROJECTS");
+            let table = document.getElementById("ASSETS");
             let tr = table.getElementsByTagName("tr");
             let rowCount = 0;
 
