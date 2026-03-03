@@ -160,7 +160,7 @@
         }
 
         .row-even {
-            background-color: #AFEEEE;
+            background-color: #FFFF00;
         }
 
         .row-odd {
@@ -282,7 +282,7 @@
     <!-- ========== BLUE TOP BANNER ========== -->
     <div id="topBanner">
         <div class="bannerLeft">ASSETS</div>
-        <div class="bannerRight">03/03/2026 - 12:40:02</div>
+        <div class="bannerRight">03/03/2026 - 12:53:32</div>
     </div>
 
     <!-- ========== FILTER WRAPPER ========== -->
@@ -294,15 +294,13 @@
         </div>
         <div id="activeCheckboxWrapper">
             <label for="activeCheckbox">
-                <input type="checkbox" id="activeCheckbox" onclick="filterTable()"> Active Only
+                <input type="checkbox" id="activeCheckbox" onclick="filterTable()"> Available Only
             </label>
         </div>
     </div>
 
-
     <!-- ========== TABLE WRAPPER ========== -->
     <div class="table-wrapper">
-
 <!-- TABLE_START -->
 <table id="ASSETS">
 
@@ -1698,20 +1696,10 @@
     </table>
 <!-- TABLE_END -->
 
+
             </thead>
         </table>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
 	        let currentSortColumn = -1;
@@ -1732,7 +1720,7 @@
 
             input = document.getElementById("filterInput");
             filter = input.value.toUpperCase();
-            table = document.getElementById("ASSETS");
+            table = document.getElementById("PROJECTS");
             tr = table.getElementsByTagName("tr");
 
             let rowCount = 0;
@@ -1743,7 +1731,7 @@
 
                 let statusCell = td[4]; // Status column is the 5th column (index 4)
                 let statusText = statusCell ? statusCell.textContent || statusCell.innerText : '';
-                let isStatusActive = statusText.replace(/\s+/g, '').toUpperCase() === 'ACTIVE';
+                let isStatusActive = statusText.replace(/\s+/g, '').toUpperCase() === 'AVAILABLE';
 
                 if (isActiveOnly && !isStatusActive) {
                     tr[i].classList.add('hidden');
@@ -1776,7 +1764,7 @@
         function sortTable(n) {
 
             let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("ASSETS");
+            table = document.getElementById("PROJECTS");
             switching = true;
             let th = table.getElementsByTagName("th")[n];
 
@@ -1831,7 +1819,7 @@
 
         // Function to apply alternating row colors
         function applyAlternatingRowColors() {
-            let table = document.getElementById("ASSETS");
+            let table = document.getElementById("PROJECTS");
             let tr = table.getElementsByTagName("tr");
             let rowCount = 0;
 
